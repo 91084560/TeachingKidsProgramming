@@ -15,29 +15,28 @@ public class Houses4
     Tortoise.setX(200);
     int height = 40;
     drawHouse(height);
-    //drawHouse(120);
-    //drawHouse(90);
-    //drawHouse(20);
+    drawHouse(120);
+    drawHouse(90);
+    drawHouse(20);
   }
   private static void drawHouse(int height)
   {
     Tortoise.setPenColor(PenColors.Blues.DarkCyan);
-    Tortoise.setPenWidth(3);
+    Tortoise.setPenWidth(8);
     Tortoise.move(height);
-    drawParallelogramRoof();
+    drawSlantedRoof();
     Tortoise.move(height);
     Tortoise.turn(-90);
     Tortoise.move(20);
     Tortoise.turn(-90);
   }
-  private static void drawParallelogramRoof()
+  private static void drawSlantedRoof()
   {
+    int a = 15;
+    Tortoise.move(a);
+    int c = 21;
+    Tortoise.turn(135);
+    Tortoise.move(c);
     Tortoise.turn(45);
-    Tortoise.move(15);
-    Tortoise.turn(45);
-    Tortoise.move(15);
-    Tortoise.turn(-300);
-    Tortoise.move(15);
-    Tortoise.turn(-45);
   }
 }
