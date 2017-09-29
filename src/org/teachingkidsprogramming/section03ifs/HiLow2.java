@@ -5,7 +5,7 @@ import java.util.Random;
 import org.teachingextensions.logo.Sound;
 import org.teachingextensions.logo.utils.EventUtils.MessageBox;
 
-public class HiLow
+public class HiLow2
 {
   public static void main(String[] args)
   {
@@ -14,7 +14,8 @@ public class HiLow
     //    int answer = (int) (Math.random() * 100 + 1);
     Random rand = new Random();
     int answer = rand.nextInt(100) + 1;
-    for (int i = 1; i <= 8; i++)
+    int lives = MessageBox.askForNumericalInput("How many Guesses");
+    for (int i = 1; i <= lives; i++)
     {
       int guess = MessageBox.askForNumericalInput("What is your guess?");
       if (guess == answer)
@@ -25,13 +26,15 @@ public class HiLow
       }
       else if (guess > answer)
       {
-        MessageBox.showMessage("Too high");
+        MessageBox.showMessage("Too high. You have " + (lives - i) + " guesses left.");
+        //        System.out.println("You have "+ (lives - i) + " guesses left");
       }
       else
       {
-        MessageBox.showMessage("Too low");
+        MessageBox.showMessage("Too low. You have " + (lives - i) + " guesses left.");
+        //        System.out.println("You have "+ (lives - i) + " guesses left");
       }
-      if (i == 8)
+      if (i == lives)
       {
         MessageBox.showMessage("You lost");
         System.out.println(answer);
