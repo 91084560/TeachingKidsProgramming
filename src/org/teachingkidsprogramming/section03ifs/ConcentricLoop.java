@@ -10,6 +10,7 @@ public class ConcentricLoop
     //  Set the tortoise x position to 150 --#4.1
     Tortoise.setX(150);
     //  Set the tortoise y position to 200 --#4.2
+    Tortoise.setY(200);
     //  Set the tortoise speed to 10  --#4.3
     //  Do the following 360 times --#3.1
     for (int i = 0; i < 360; i++)
