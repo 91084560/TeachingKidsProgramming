@@ -7,7 +7,7 @@ import org.teachingextensions.logo.Tortoise;
 import org.teachingextensions.logo.utils.ColorUtils.PenColors;
 import org.teachingextensions.logo.utils.EventUtils.MessageBox;
 
-public class ChooseYourOwnAdventure
+public class ChooseYourOwnAdventure3
 {
   public static void main(String[] args)
   {
@@ -40,32 +40,25 @@ public class ChooseYourOwnAdventure
     MessageBox.showMessage(
         "You approach a glowing, green bucket of ooze. Worried that you will get in trouble, you pick up the bucket.");
     String answer = MessageBox.askForTextInput("Do you want to pour the ooze into the 'backyard' or 'toilet'?");
-    if ("toilet".equalsIgnoreCase(answer))
+    if (answer.equalsIgnoreCase("toilet"))
     {
       pourIntoToilet();
     }
-    else if ("backyard".equalsIgnoreCase(answer))
+    else if (answer.equalsIgnoreCase("backyard"))
     {
-      pourIntoBackyard();
-    }
-    else
-    {
-      endStory();
-    }
-  }
-  private static void pourIntoBackyard()
-  {
-    MessageBox.showMessage(
-        "As you walk into the backyard a net scoops you up and a giant takes you to a boiling pot of water.");
-    String answer = MessageBox
-        .askForTextInput("As the man starts to prepare you as soup, do you...'Scream' or 'Faint'?");
-    if (answer.equalsIgnoreCase("faint"))
-    {
-      MessageBox.showMessage("You made a delicious soup! Yum! The end.");
-    }
-    else if (answer.equalsIgnoreCase("scream"))
-    {
-      startStory();
+      //            pourIntoBackyard (recipe below) --#19.1
+      //            ------------- Recipe for pourIntoBackyard --#19.2
+      //                Tell the user "As you walk into the backyard a net scoops you up and a giant takes you to a boiling pot of water." --#17
+      MessageBox.showMessage(
+          "As you walk into the backyard a net scoops you up and a giant takes you to a boiling pot of water.");
+      //                Ask the user "As the man starts to prepare you as soup, do you...'Scream' or 'Faint'?" --#18
+      //                If they answer "faint" --#20.1
+      //                        Tell the user "You made a delicious soup! Yum! The end." --#21
+      //                Otherwise, if they answer "scream" --#20.2
+      //                    startStory --#22
+      //                Otherwise, if they answer anything else --#20.3
+      //                    endStory --#23
+      //         ------------- End of pourIntoBackyard recipe --#19.3
     }
     else
     {
