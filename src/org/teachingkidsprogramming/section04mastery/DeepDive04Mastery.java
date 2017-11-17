@@ -142,6 +142,8 @@ public class DeepDive04Mastery
   }
   public void whatClass() throws Exception
   {
+    Number num1 = 12 / 5;
+    Number num2 = 10.0 / 2;
   }
   /**
    * Ignore the following, It's needed to run the deep dive

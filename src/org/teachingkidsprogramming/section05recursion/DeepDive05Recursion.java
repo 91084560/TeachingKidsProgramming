@@ -24,7 +24,7 @@ public class DeepDive05Recursion
   @Test
   public void changeThePointerToAHand() throws Exception
   {
-    Tortoise.getBackgroundWindow().___();
+    Tortoise.getBackgroundWindow().setCursor(Cursor.HAND_CURSOR);
     Assert.assertEquals(getCursor(), Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
   }
   @Test
@@ -38,7 +38,7 @@ public class DeepDive05Recursion
   {
     HashMap<Integer, Color> colors = new HashMap<Integer, Color>();
     colors.put(10, PenColors.Greens.Lime);
-    colors.put(____, PenColors.Greens.DarkGreen);
+    colors.put(20, PenColors.Greens.DarkGreen);
     Assert.assertEquals(PenColors.Greens.DarkGreen, colors.get(20));
   }
   @Test
