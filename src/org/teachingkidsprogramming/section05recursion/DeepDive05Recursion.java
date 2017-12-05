@@ -30,7 +30,7 @@ public class DeepDive05Recursion
   @Test
   public void getTheWindow() throws Exception
   {
-    Tortoise.___().setCursor(Cursor.CROSSHAIR_CURSOR);
+    Tortoise.getBackgroundWindow().setCursor(Cursor.CROSSHAIR_CURSOR);
     Assert.assertEquals(getCursor(), Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
   }
   @Test
