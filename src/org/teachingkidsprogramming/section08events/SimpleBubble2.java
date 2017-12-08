@@ -8,10 +8,10 @@ import org.teachingextensions.logo.utils.ColorUtils.PenColors;
 import org.teachingextensions.logo.utils.EventUtils.MouseLeftClickListener;
 import org.teachingextensions.logo.utils.LineAndShapeUtils.Circle;
 
-public class SimpleBubble implements MouseLeftClickListener
+public class SimpleBubble2 implements MouseLeftClickListener
 {
   ProgramWindow programWindow;
-  public SimpleBubble()
+  public SimpleBubble2()
   {
     programWindow = new ProgramWindow("My Bubble");
     programWindow.setWindowVisible(true);
@@ -20,9 +20,9 @@ public class SimpleBubble implements MouseLeftClickListener
   }
   private void prepareColorPalette()
   {
-    ColorWheel.addColor(PenColors.Purples.Purple);
+    ColorWheel.addColor(PenColors.Purples.DarkSlateBlue);
     ColorWheel.addColor(PenColors.Blues.LightSteelBlue);
-    ColorWheel.addColor(PenColors.Blues.Blue);
+    ColorWheel.addColor(PenColors.Blues.CadetBlue);
     ColorWheel.addColor(PenColors.Blues.DarkBlue);
   }
   @Override
@@ -32,9 +32,9 @@ public class SimpleBubble implements MouseLeftClickListener
   }
   private void createBubble(int x, int y)
   {
-    programWindow.clearWindow();
+    //programWindow.clearWindow();
     Random rand = new Random();
-    int radius = rand.nextInt(41) + 10;
+    int radius = rand.nextInt(11) + 10;
     System.out.println(radius);
     Circle circle = new Circle(radius, ColorWheel.getNextColor());
     circle.setCenter(x, y);
